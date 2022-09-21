@@ -42,13 +42,14 @@
     --outline-active-color: var(--a-color);
     --code-block-bg-color: #2b2b2b;
     --code-block-color: #A9B7C6;
-    --title-color: #273849;
+    /*--title-color: #273849;*/
+    --title-color: #2e2e2e;
     --blockquote-border-color: var(--drake-accent);
     /*--blockquote-color: var(--text-color);*/
     --blockquote-color: #707070;
     --blockquote-bg-color: #fdefee;
     --strong-color: var(--title-color);
-    --h2-underline-color: var(--title-color);
+    --h2-underline-color: #2e2e2e35;
     --horizontal-divider-color: var(--title-color);
     --height-light-color: var(--drake-highlight);
     --height-light-border-color: var(--drake-highlight);
@@ -224,6 +225,7 @@ pre.md-fences-advanced.md-focus .md-fences-adv-panel {
     stroke: var(--table-border-color) !important;
     fill: var(--code-block-bg-color) !important;
 }
+
 #write .md-diagram-panel .md-diagram-panel-preview div { /*形状内文字*/
     color: var(--code-block-color);
     font-family: var(--text-font) !important;
@@ -372,10 +374,10 @@ h6 {
     cursor: text;
     color: var(--title-color);
 }
-
-h3.md-focus:before, h4.md-focus:before, h5.md-focus:before, h6.md-focus:before {
-    visibility: hidden;
-}
+/* 展示左侧h3小图标,注释掉原代码 */
+/*h3.md-focus:before, h4.md-focus:before, h5.md-focus:before, h6.md-focus:before {*/
+/*    visibility: hidden;*/
+/*}*/
 
 h1 {
     font-size: 2rem;
@@ -387,11 +389,13 @@ h2 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
 }
+
 h2 .md-plain {
     padding-bottom: .3rem;
-    border-bottom: .2rem solid var(--h2-underline-color);
+    border-bottom: .15rem solid var(--h2-underline-color);
     line-height: 3rem;
 }
+
 .on-focus-mode h2.md-end-block.md-heading:not(.md-focus):not(.md-focus-container):after {
     background-color: var(--blur-text-color) !important;
 }
@@ -638,6 +642,10 @@ kbd {
 
 .mathjax-block > .code-tooltip {
     bottom: .375rem;
+}
+
+#write > .md-focus:before{
+  color:#8a8a8a;
 }
 
 #write > h3.md-focus:before {
